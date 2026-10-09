@@ -10,7 +10,7 @@ Plain HTML, CSS and a few lines of JavaScript, with no build step. Each page is 
 - `/experiences/` work history, education and skills
 - `/contact/` contact details and form
 
-Styling is in `assets/style.css`. `assets/site.js` handles the theme toggle, scroll reveals and the demo video. App screenshots and the demo clip are in `assets/etw/`.
+Styling is in `assets/style.css`. `assets/site.js` handles the theme toggle, scroll reveals and the demo video. On phones the page links sit in a floating bar at the bottom of the screen (styled in the `max-width: 640px` block). App screenshots and the demo clip are in `assets/etw/`.
 
 ## Preview locally
 

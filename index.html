@@ -11,15 +11,35 @@
   <meta property="og:title" content="Ashwiin Nedun · Software Engineer in Singapore">
   <meta property="og:description" content="Ashwiin Nedun is a software engineer at Tata Consultancy Services building Java, Spring Boot and Angular systems for Singapore Airlines, and the creator of the Explore the Word app.">
   <meta property="og:url" content="https://www.ashwiinnedun.com/">
-  <meta property="og:image" content="https://www.ashwiinnedun.com/assets/ashwiin-nedun.png">
+  <meta property="og:image" content="https://www.ashwiinnedun.com/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ashwiin Nedun, software engineer in Singapore: I build and ship software end to end.">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0c0e13" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ashwiin Nedun",
+    "url": "https://www.ashwiinnedun.com/",
+    "image": "https://www.ashwiinnedun.com/assets/ashwiin-nedun.png",
+    "jobTitle": "Software Engineer",
+    "worksFor": { "@type": "Organization", "name": "Tata Consultancy Services" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Goldsmiths, University of London" },
+    "address": { "@type": "PostalAddress", "addressCountry": "SG" },
+    "knowsAbout": ["Java", "Spring Boot", "Angular", "TypeScript", "Microservices", "AWS", "Flutter"],
+    "sameAs": ["https://www.linkedin.com/in/ashwiin-nedun/", "https://github.com/Ashwiin"]
+  }
+  </script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to main content</a>
@@ -27,18 +47,19 @@
     <div class="wrap bar">
       <a class="brand" href="/">Ashwiin Nedun<span>.</span></a>
       <nav class="site-nav" aria-label="Primary">
+        <a class="nav-home" href="/" aria-current="page">Home</a>
         <a href="/project-page/">Work</a>
         <a href="/experiences/">Experience</a>
         <a href="/contact/">Contact</a>
-        <button class="theme" type="button" aria-label="Switch between light and dark theme"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
       </nav>
+      <button class="theme" type="button" aria-label="Switch between light and dark theme"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
     </div>
   </header>
 
   <main id="main">
     <section class="wrap hero">
-      <div>
-        <p class="status"><span class="dot"></span>Software Engineer at TCS · Singapore</p>
+      <div class="hero-copy">
+        <p class="status"><span class="dot"></span><span class="role">Software Engineer at TCS</span><span class="sep" aria-hidden="true">·</span><span class="place">Singapore</span></p>
         <h1>I build and ship software <em>end to end.</em></h1>
         <p class="intro">I'm <strong>Ashwiin Nedun</strong>, a software engineer at Tata Consultancy Services in Singapore. I work on the Singapore Airlines systems that distribute passenger data and issue miles and vouchers.</p>
         <p class="intro-sub">I have more than seven years in IT. I started in enterprise support for banks and multinationals, went on to lead a team, took a full-time computing degree at Goldsmiths, University of London, and now build full stack in Java, Spring Boot and Angular. In my own time I built and shipped <strong>Explore the Word</strong>, an AI Bible-study app on the App Store and Google Play.</p>
@@ -50,7 +71,7 @@
         </div>
       </div>
       <div class="hero-art">
-        <div class="ring"><img class="portrait" src="/assets/ashwiin-nedun.png" width="520" height="520" alt="Portrait of Ashwiin Nedun"></div>
+        <div class="ring"><img class="portrait" src="/assets/ashwiin-nedun.webp" width="520" height="520" fetchpriority="high" alt="Portrait of Ashwiin Nedun"></div>
         <a class="float-card" href="/explore-the-word/">
           <img src="/assets/etw/icon.jpg" width="256" height="256" alt="">
           <span><b>Explore the Word</b><small>Side project · iOS and Android</small></span>
@@ -197,7 +218,7 @@
         <h2>Experience</h2>
         <a class="more" href="/experiences/">Full experience →</a>
       </div>
-      <div class="timeline">
+      <div class="timeline brief">
         <article class="row reveal">
           <p class="when">Dec 2023 – present</p>
           <div>

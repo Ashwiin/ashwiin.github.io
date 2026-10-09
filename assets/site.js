@@ -11,21 +11,38 @@
         : window.matchMedia('(prefers-color-scheme: dark)').matches;
       var next = dark ? 'light' : 'dark';
       root.dataset.theme = next;
+      paintBrowserBar();
       try {
         localStorage.setItem('theme', next);
       } catch (e) {}
     });
   }
 
+  // The browser's own bar takes the page colour, including after a manual switch.
+  function paintBrowserBar() {
+    if (!root.dataset.theme) return;
+    var colour = getComputedStyle(root).getPropertyValue('--bg').trim();
+    document.querySelectorAll('meta[name="theme-color"]').forEach(function (meta) {
+      meta.removeAttribute('media');
+      meta.content = colour;
+    });
+  }
+  paintBrowserBar();
+
   var canObserve = 'IntersectionObserver' in window;
 
-  // Fade sections in as they scroll into view.
+  // Fade sections in as they scroll into view. Content is only hidden once this
+  // script is running, and anything already on screen is shown straight away.
   var reveals = document.querySelectorAll('.reveal');
   if (reduce || !canObserve) {
     reveals.forEach(function (el) {
       el.classList.add('in');
     });
   } else {
+    reveals.forEach(function (el) {
+      if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('in');
+    });
+    root.classList.add('reveal-ready');
     var revealer = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
